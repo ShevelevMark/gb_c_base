@@ -1,0 +1,5 @@
+Ссылка на домашнее задание 
+https://github.com/ShevelevMark/gb_c_base/tree/main/HW-2
+
+Ссылка на скриншот запуска
+https://github.com/ShevelevMark/gb_c_base/blob/main/HW-2/res/result.png
