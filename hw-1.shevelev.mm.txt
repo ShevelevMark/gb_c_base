@@ -1,5 +1,0 @@
-Ссылка на папку с домашним заданием на main
-https://github.com/ShevelevMark/gb_c_base/tree/main/HW-1
-
-Скриншот
-https://github.com/ShevelevMark/gb_c_base/blob/main/HW-1/res/result.png

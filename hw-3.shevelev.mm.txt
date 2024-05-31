@@ -1,5 +1,0 @@
-Ссылка на папку с домашним задание в main
-https://github.com/ShevelevMark/gb_c_base/tree/main/HW-3
-
-Ссылка на скриншот запуска программы
-https://github.com/ShevelevMark/gb_c_base/blob/main/HW-3/res/result.png
