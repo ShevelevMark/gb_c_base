@@ -15,7 +15,8 @@
 void asc_hoar_sort(int*, int*);
 
 void sort_array(int size, int a[]) {
-    asc_hoar_sort(a, a + size);
+    if (0 == size) return;
+    asc_hoar_sort(a, a + size - 1);
 }
 
 void swap(int *a, int *b) {
