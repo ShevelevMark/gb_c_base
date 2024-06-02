@@ -19,14 +19,17 @@ void swap(int *a, int *b) {
 
 void even_odd_partition(int *begin, int *end) {
     int *wall = begin, *even = begin;
-    while (even != end) {
+    while (1) {
+        while (wall != end && 0 == *wall % 2) ++wall;
+        if (wall == end) break;
+        even = wall;
+
         while (even != end && 1 == *even % 2) ++even;
         if (even == end) break;
-        while (even > wall + 1) {
+        while (even > wall) {
             swap(even, even - 1);
             --even;
         }
-        wall = even;
-        ++even;
+        ++wall;
     }
 }
