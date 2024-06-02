@@ -8,8 +8,8 @@
  * **/
 
 /**
- * В файле, согласно заданию закомментирована функция main.
- * Из него нельзя будет собрать исполняемый файл приложенным Makefile.
+ * В файле, согласно заданию отсутсвует функция main. Она перенесена в 
+ * файл test.prob-1.c
  * **/
 
 void asc_hoar_sort(int*, int*);
@@ -43,22 +43,3 @@ void asc_hoar_sort(int *l, int *r) {
         asc_hoar_sort(split + 1, r);
     }
 }
-
-/*#include <stdio.h>
-
-int main() {
-    int arr[7] = {1, 7, 9 ,-2, 4, 0, 8};
-
-    for (int *it = arr, *end = arr + 7; it != end; ++it)
-        printf("%d ", *it);
-    printf("\n");
-
-    asc_hoar_sort(arr, arr + 6);
-
-    for (int *it = arr, *end = arr + 7; it != end; ++it)
-        printf("%d ", *it);
-    printf("\n");
-
-    return 0;
-}*/
-
