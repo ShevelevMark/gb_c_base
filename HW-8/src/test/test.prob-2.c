@@ -1,6 +1,6 @@
 /**
- * @file test-1.c
- * @brief В этом файле находится тестирующий код для первой задачи
+ * @file test.prob-2.c
+ * @brief В этом файле находится тестирующий код для второй задачи
  * **/
  
 void sort_even_odd(int n, int a[]);
@@ -8,8 +8,7 @@ void sort_even_odd(int n, int a[]);
 #include <stdio.h>
 
 int main() {
-    unsigned const size = 10;
-    int arr[size];
+    int arr[10];
     for (int *it = arr, *end = arr + size; it != end; ++it)
         if (1 != scanf("%d", it)) {
             printf("Error");
