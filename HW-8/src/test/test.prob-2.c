@@ -9,15 +9,15 @@ void sort_even_odd(int n, int a[]);
 
 int main() {
     int arr[10];
-    for (int *it = arr, *end = arr + size; it != end; ++it)
+    for (int *it = arr, *end = arr + 10; it != end; ++it)
         if (1 != scanf("%d", it)) {
             printf("Error");
             return 1;
         }
 
-    sort_even_odd(size, arr);
+    sort_even_odd(10, arr);
 
-    for (int *it = arr, *end = arr + size; it != end; ++it)
+    for (int *it = arr, *end = arr + 10; it != end; ++it)
         printf("%d ", *it);
     printf("\n");
 
