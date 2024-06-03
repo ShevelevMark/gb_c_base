@@ -5,5 +5,5 @@ BIN := $(patsubst ./src/%.c, ./bin/%, $(SRC))
 
 all: $(BIN)
 
-./bin/%: ./src/%.c
+./bin/%: ./src/%.c ./src/test/test.%.c
 	gcc $^ -o $@ $(CFLAGS)
