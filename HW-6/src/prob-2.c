@@ -14,7 +14,7 @@ void print_consecutive(int a, int b) {
 
     if (a > b) // если a > b, то мы должны распечатать ещё и все числа от a - 1 до b 
         print_consecutive(a - 1, b);
-    else
+    else // и наоборот
         print_consecutive(a + 1, b);
 }
 

@@ -4,15 +4,15 @@
  * Используя данную функцию, решить задачу.
  * **/
 
-int recurs_power(int n, int p) {
-    if (0 == p) return 1;
-    if (1 == p % 2)
-        return n * recurs_power(n, p - 1);
-    int x = recurs_power(n, p / 2);
-    return x * x;
-}
-
 #include <stdio.h>
+
+int recurs_power(int n, int p) {
+    if (0 == p) return 1;                    // любое положительное число в нулевой степени равно 1 (база рекурсии)
+    if (1 == p % 2)                          
+        return n * recurs_power(n, p - 1);   // если степень нечётная, то рекурсивный вызов понижает степень на 1
+    int x = recurs_power(n, p / 2);          // если степень чётная (2k), то можно вычислить x^k
+    return x * x;                            // затем по свойству степени возвести x^k в квадрат -> x^(2k)
+}
 
 int main() {
     // test 1
