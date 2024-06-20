@@ -4,12 +4,12 @@
  * Учитывая тему лекции, полагаю, что нужно было сделать рекурсивно.
  * **/
 
+#include <stdio.h>
+
 unsigned count_ones(unsigned n) {
     if (0 == n) return 0;
     return (n & 1 ? 1 : 0) + count_ones(n >> 1);
 }
-
-#include <stdio.h>
 
 int main() {
     // test 1
