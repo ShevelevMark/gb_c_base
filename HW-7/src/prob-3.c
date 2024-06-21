@@ -4,6 +4,12 @@
 
 #include <stdio.h>
 
+void swap(int *a, int *b) {
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
 /**
  * @brief Вспомогательная функция, которая обращает порядок элементов в массиве:
  * 1 2 3 4 5 -> 5 4 3 2 1
@@ -14,13 +20,8 @@
 void reverse(int *begin, int *end) {
     if (begin == end) return;
     --end;
-    while (begin < end) {
-        int tmp = *begin;
-        *begin = *end;
-        *end = tmp;
-        ++begin;
-        --end;
-    }
+    while (begin < end)
+        swap(begin++, end--);
 }
 
 int main() {
