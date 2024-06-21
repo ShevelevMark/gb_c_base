@@ -3,6 +3,8 @@
  * Определить, какое число в массиве встречается чаще всего. Гарантируется, что такое число ровно 1.
  * **/
 
+#include <stdio.h>
+
 void swap(int *a, int *b) {
     int tmp = *a;
     *a = *b;
@@ -19,8 +21,6 @@ void buble_sort(int *begin, int *end) {
                 swap(it, it + 1), sorted = 0;
     }
 }
-
-#include <stdio.h>
 
 int main() {
     int nums[10];
