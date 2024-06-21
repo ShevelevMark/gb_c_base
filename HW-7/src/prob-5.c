@@ -8,6 +8,8 @@
  * Показывает, что однозначные числа считаются верными
  * **/
 
+#include <stdio.h>
+
 /**
  * @brief Вспомогательная функция, которая копирует нужные числа в другой массив
  * 
@@ -25,8 +27,6 @@ int* filter(int const *src_begin, int const *src_end, int *dst_begin) {
             *dst_begin++ = *it;
     return dst_begin;
 }
-
-#include <stdio.h>
 
 int main() {
     int src[10], dst[10];
