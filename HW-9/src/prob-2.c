@@ -4,6 +4,8 @@
  * Результат записать в .txt.
  * **/
 
+#include <stdio.h>
+
 void a_to_b(char *str) {
     while (0 != *str) {
         switch(*str) {
@@ -23,8 +25,6 @@ void a_to_b(char *str) {
         ++str;
     }
 }
-
-#include <stdio.h>
 
 int a_to_b_files(char const *input_file, char const *output_file) {
     char str[1001];

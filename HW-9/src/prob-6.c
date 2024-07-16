@@ -3,6 +3,8 @@
  * Ответ записать в файл .txt.
  * **/
 
+#include <stdio.h>
+
 unsigned last_a_count(char const *str) {
     if (0 == *str) return 0;
     unsigned cnt = 0;
@@ -14,8 +16,6 @@ unsigned last_a_count(char const *str) {
     if ('a' == *curr || 'A' == *curr) ++cnt;
     return cnt;
 }
-
-#include <stdio.h>
 
 int last_a_count_files(char const *input_file, char const *output_file) {
     char str[1001];

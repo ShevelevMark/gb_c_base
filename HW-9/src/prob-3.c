@@ -14,6 +14,8 @@
  * Основная функция будет читать данные и записывать их.
  * **/
 
+#include <stdio.h>
+
 /**
  * @brief Функция считывает данные из строки с цифрами и буквами в числа
  * 
@@ -30,8 +32,6 @@ unsigned map_string_to_nums(char const *str, int *nums);
  * @param last  адрес последнего числа в промежутке для сортировки
  */
 void hoar_sort(int *first, int *last);
-
-#include <stdio.h>
 
 int map_string_to_numbers_files(char const *input_filename, char const *output_file) {
     char input_string[1002];
