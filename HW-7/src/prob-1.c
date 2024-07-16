@@ -6,16 +6,16 @@
 #include <stdio.h>
 
 int main() {
-    int nums[5];
-    for (int *it = nums, *end = nums + 5; it != end; ++it)
-        if (1 != scanf("%d", it)) {
+    float nums[5];
+    for (float *it = nums, *end = nums + 5; it != end; ++it)
+        if (1 != scanf("%f", it)) {
             printf("Error");
             return 1;
         }
     
     float avg = 0.f;
-    for (int *it = nums, *end = nums + 5; it != end; ++it)
-        avg += (float)*it;
+    for (float *it = nums, *end = nums + 5; it != end; ++it)
+        avg += *it;
     avg /= 5.f;
     printf("%.3f\n", avg);
 

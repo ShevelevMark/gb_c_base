@@ -17,19 +17,27 @@ void swap(int *a, int *b) {
     *b = tmp;
 }
 
+/**
+ * Идея алгоритма:
+ * odd - уазывает на последний нечётный
+ * even - на первый чётный за нечётным
+ * Затем even движется назад, переставляя элементы, пока не достигнет odd
+ * Важно! end - это past-the-end адрес, 
+ *    он никогда не будет разыменован, но с ним могут сравниваться другие действительные адреса
+ * **/
 void even_odd_partition(int *begin, int *end) {
-    int *wall = begin, *even = begin;
+    int *odd = begin, *even = begin;
     while (1) {
-        while (wall != end && 0 == *wall % 2) ++wall;
-        if (wall == end) break;
-        even = wall;
+        while (odd != end && 0 == *odd % 2) ++odd;
+        if (odd == end) break;
+        even = odd + 1;
 
         while (even != end && 1 == *even % 2) ++even;
         if (even == end) break;
-        while (even > wall) {
+        while (even > odd) {
             swap(even, even - 1);
             --even;
         }
-        ++wall;
+        ++odd;
     }
 }
