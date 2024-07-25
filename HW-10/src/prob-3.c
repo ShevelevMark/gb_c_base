@@ -11,6 +11,9 @@
  * Т.е. строка всегда завершается символом или комбинацией символа и раширения \.[a-z|0-9]+
  * **/
 
+#include <string.h>
+#include <stdio.h>
+
 char* ext(char *str) {
     char *ext_ = str;
     while (0 != *str) {
@@ -22,14 +25,10 @@ char* ext(char *str) {
     return ext_;
 }
 
-#include <string.h>
-
 void change_ext(char *str) {
     char *ext_ = ext(str);
     strcpy(ext_, ".html");
 }
-
-#include <stdio.h>
 
 int change_ext_files(char const *input_file, char const *output_file) {
     char str[1006]; // +5 символов на расширение .html 

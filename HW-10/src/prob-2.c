@@ -4,6 +4,7 @@
  * **/
 
 #include <stdbool.h>
+#include <stdio.h>
 
 bool bad_symbol_predicate(char *str, char *pos) {
     return ' ' == *pos && (str == pos || ' ' == pos[-1]); // плохой пробел лежит в начале строки, либо до него тоже пробел
@@ -18,8 +19,6 @@ char* trim_spaces(char *str) {
                 *vacant++ = *swap;
     return str != vacant && ' ' == vacant[-1] ? (vacant - 1) : vacant; // проверка для удаления завершающего пробела
 }
-
-#include <stdio.h>
 
 int trim_spaces_files(char const *input_file, char const *output_file) {
     char str[1001];

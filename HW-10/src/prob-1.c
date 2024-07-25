@@ -7,6 +7,8 @@
  * Строка из английских букв, пробелов и знаков препинания. Не более 1000 символов.
  * **/
 
+#include <stdio.h>
+
 void swap(char *l, char *r) {
     char tmp = *l;
     *l = *r;
@@ -27,8 +29,6 @@ void swap_adjacent(char *str) {
         left = right + 1;
     }
 }
-
-#include <stdio.h>
 
 int swap_adjacent_files(char const *input_file, char const *output_file) {
     char str[1001];
