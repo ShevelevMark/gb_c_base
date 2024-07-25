@@ -12,6 +12,7 @@
  * **/
 
 #include <stdbool.h>
+#include <stdio.h>
 
 void map_string(char const *str, char *mapped) {
     bool set[128];
@@ -25,8 +26,6 @@ void map_string(char const *str, char *mapped) {
     }
     *mapped = 0;
 }
-
-#include <stdio.h>
 
 int map_string_files(char const *input_file, char const *output_file) {
     char str[1001], mapped[128]; // результирующая строка не может быть более 127 символов

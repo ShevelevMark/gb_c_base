@@ -11,6 +11,7 @@
  * **/
 
 #include <ctype.h>
+#include <stdio.h>
 
 char const * find_max_length_word(char const *str) {
     char const *word_it, *max_word_it = str;
@@ -30,8 +31,6 @@ char const * find_max_length_word(char const *str) {
     }
     return 0 == max_word_length ? str : max_word_it;
 }
-
-#include <stdio.h>
 
 int max_length_word_files(char const *input_file, char const *output_file) {
     char str[1001];

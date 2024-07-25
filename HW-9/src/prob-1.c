@@ -8,14 +8,15 @@
  * таблицы символов фиксированного размера.
  * **/
 
+#include <stdbool.h>
+#include <stdio.h>
+
 void count_letters(char const *w, int *count) {
     while (0 != *w) {
         ++count[*w - 'a'];
         ++w;
     }
 }
-
-#include <stdbool.h>
 
 void unique_common_letters(char const *w1, char const *w2, bool *ucl) {
     int letters1[26] = {0}, letters2[26] = {0};
@@ -25,8 +26,6 @@ void unique_common_letters(char const *w1, char const *w2, bool *ucl) {
     for (unsigned idx = 0; idx != 26; ++idx)
         if (1 == letters1[idx] && 1 == letters2[idx]) ucl[idx] = true;
 }
-
-#include <stdio.h>
 
 int unique_common_letters_files(char const *input_file, char const *output_file) {
     char w1[101], w2[101];
